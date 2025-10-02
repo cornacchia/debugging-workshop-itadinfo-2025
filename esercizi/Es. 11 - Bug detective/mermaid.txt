@@ -1,0 +1,29 @@
+Copiare il testo sottostante (a partire da "flowchart TD" e fino alla fine) nel box
+sulla sinistra (etichettato come "Code") della pagina https://mermaid.live/edit per ottenere
+una rappresentazione grafica dell'algoritmo implementato da branchingMain.py
+
+flowchart TD
+1(["<strong>Inizio</strong>"]) ==> 3
+2(["<strong>Fine</strong>"])
+3["piove = vero / falso<br/>sole = vero / falso<br/>temperatura=1,2,3,...<br/>vento=1,2,3,...."] ==> 4
+4{"piove?"} ==> |Falso| 5
+4 ==> |Vero| 6
+5(["(5)"]) ==> 7
+6(["(6)"]) ==> 8
+7{"sole?"} ==> |Vero| 9
+7 ==> |Falso| 10
+9(["(9)"]) ==> 900
+10(["(10)"]) ==> 1000
+900[/"Prendi occhiali da sole"/] ==> 2
+1000[/"Prendi felpa"/] ==> 2
+8{"temperatura < 0"} ==> |Vero| 11
+8 ==> |Falso| 12
+11(["(11)"]) ==> 110
+110[/"Prendi tuta da neve"/] ==> 2
+12(["(12)"]) ==> 13
+13{"vento > 100"} ==> |Vero| 14
+13 ==> |Falso| 15
+14(["(14)"]) ==> 140
+140[/"Non uscire"/] ==> 2
+15(["(15)"]) ==> 150
+150[/"Prendi ombrello"/] ==> 2
